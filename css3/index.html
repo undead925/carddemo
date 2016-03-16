@@ -93,7 +93,8 @@
         card.insertBefore(ace[i],backb);
 
         card.animstate=0;
-        card.isturn=false;
+        card.isturn=true;
+        backb.style.display="none";
 
         card.turncard=function (){
             console.log(this);
@@ -309,7 +310,7 @@
         }
     }
 
-    var isturnall=false;
+    var isturnall=true;
     var isshuffle=0;
     var cards=[];
     var gamediv=document.getElementsByClassName("gamediv")[0];
@@ -330,9 +331,6 @@
         cards.push(new Card(rand));
         gamediv.appendChild(cards[i]);
         cards[i].__index=i;
-
-        cards[i].addEventListener("webkitTransitionEnd", cards[i].turncard);
-        cards[i].addEventListener("touchstart", cards[i].cardclick);
         setPostion(cards[i],pointarray[i]);
     }
 
