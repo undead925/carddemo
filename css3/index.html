@@ -257,7 +257,7 @@
             for(var i= 0,l=cards.length;i<l;i++){
                 cards[i].removeEventListener("transitionend", cards[i].shuffle);
                 cards[i].addEventListener("transitionend", cards[i].turncard);
-                cards[i].addEventListener("click", cards[i].cardclick);
+                cards[i].addEventListener("touchstart", cards[i].cardclick);
                 cards[i].animstate=0;
             }
             isturnall=false;
@@ -267,7 +267,7 @@
 
     function removeClick(){
         for(var i= 0,l=cards.length;i<l;i++){
-            cards[i].removeEventListener("click", cards[i].cardclick);
+            cards[i].removeEventListener("touchstart", cards[i].cardclick);
         }
     }
 
@@ -310,7 +310,7 @@
         cards[i].__index=i;
 
         cards[i].addEventListener("transitionend", cards[i].turncard);
-        cards[i].addEventListener("click", cards[i].cardclick);
+        cards[i].addEventListener("touchstart", cards[i].cardclick);
         setPostion(cards[i],pointarray[i]);
     }
 
