@@ -89,8 +89,8 @@
         ace[1]=ace2;
         ace[2]=ace3;
         ace[3]=ace4;
-        card.appendChild(ace[i]);
         card.appendChild(backb);
+        card.insertBefore(ace[i],backb);
 
         card.animstate=0;
         card.isturn=false;
