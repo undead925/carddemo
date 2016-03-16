@@ -273,8 +273,8 @@
         isshuffle++;
         if(isshuffle>=8){
             for(var i= 0,l=cards.length;i<l;i++){
-                cards[i].removeEventListener("transitionend", cards[i].shuffle);
-                cards[i].addEventListener("transitionend", cards[i].turncard);
+                cards[i].removeEventListener("webkitTransitionEnd", cards[i].shuffle);
+                cards[i].addEventListener("webkitTransitionEnd", cards[i].turncard);
                 cards[i].addEventListener("touchstart", cards[i].cardclick);
                 cards[i].animstate=0;
             }
@@ -291,7 +291,7 @@
 
     function removeTransition(){
         for(var i= 0,l=cards.length;i<l;i++){
-            cards[i].removeEventListener("transitionend", cards[i].turncard);
+            cards[i].removeEventListener("webkitTransitionEnd", cards[i].turncard);
         }
     }
 
@@ -302,7 +302,7 @@
 
             for(var i= 0,l=cards.length;i<l;i++){
                 cards[i].animstate=0;
-                cards[i].addEventListener("transitionend", cards[i].shuffle);
+                cards[i].addEventListener("webkitTransitionEnd", cards[i].shuffle);
                 cards[i].shuffle(i);
             }
         }
@@ -327,7 +327,7 @@
         gamediv.appendChild(cards[i]);
         cards[i].__index=i;
 
-        cards[i].addEventListener("transitionend", cards[i].turncard);
+        cards[i].addEventListener("webkitTransitionEnd", cards[i].turncard);
         cards[i].addEventListener("touchstart", cards[i].cardclick);
         setPostion(cards[i],pointarray[i]);
     }
