@@ -99,13 +99,17 @@
             console.log(this.animstate);
             switch (this.animstate){
                 case 0:
-                    this.style.transition="transform 100ms ease-out";
-                    this.style.transform="rotate(50deg) scale(0,1)";
+//                    this.style.transition="transform 100ms ease-out";
+//                    this.style.transform="rotate(50deg) scale(0,1)";
+                    this.style.webkitTransition="transform 100ms ease-out";
+                    this.style.webkitTransform="rotate(50deg) scale(0,1)";
                     this.animstate=1;
                     break;
                 case 1:
-                    this.style.transition="transform 100ms ease-out";
-                    this.style.transform="rotate(0deg) scale(1,1)";
+//                    this.style.transition="transform 100ms ease-out";
+//                    this.style.transform="rotate(0deg) scale(1,1)";
+                    this.style.webkitTransition="transform 100ms ease-out";
+                    this.style.webkitTransform="rotate(0deg) scale(1,1)";
                     if(this.isturn){
                         backb.style.display="";
                         this.animstate=2;
@@ -129,36 +133,45 @@
             console.log(this.animstate);
             switch (this.animstate){
                 case 1:
-                    this.style.transition="left 300ms ease-out,top 300ms ease-out";
+//                    this.style.transition="left 300ms ease-out,top 300ms ease-out";
+                    this.style.webkitTransition="left 300ms ease-out,top 300ms ease-out";
                     setPostion(this,new Point(3*i-10.5,1));
                     break;
                 case 3:
                     if(i<4){
-                        this.style.transition="left "+(200+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                        this.style.transition="left "+(200+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                        this.style.webkitTransition="left "+(200+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
                         setPostion(this,new Point(-18,1));
                     }
                     else{
-                        this.style.transition="left "+(900-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                        this.style.transition="left "+(900-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                         this.style.webkitTransition="left "+(900-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
                         setPostion(this,new Point(18,1));
                     }
                     break;
                 case 4:
                     if(i<4){
-                        this.style.transition="left "+(800-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                        this.style.transition="left "+(800-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                         this.style.webkitTransition="left "+(800-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
                         setPostion(this,new Point(3*i-10.5,1));
                     }
                     else{
-                        this.style.transition="left "+(100+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                        this.style.transition="left "+(100+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                         this.style.webkitTransition="left "+(100+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
                         setPostion(this,new Point(3*i-10.5,1));
                     }
                     break;
                 case 5:
-                    this.style.transition="transform "+(200+50*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
-                    this.style.transform="rotate(50deg) scale(0,1)";
+//                    this.style.transition="transform "+(200+50*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                    this.style.transform="rotate(50deg) scale(0,1)";
+                     this.style.webkitTransition="transform "+(200+50*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                     this.style.webkitTransform="rotate(50deg) scale(0,1)";
                     break;
                 case 6:
-                    this.style.transition="transform "+(200+50*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
-                    this.style.transform="rotate(0deg) scale(1,1)";
+//                    this.style.transition="transform "+(200+50*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                    this.style.transform="rotate(0deg) scale(1,1)";
+                     this.style.webkitTransition="transform "+(200+50*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                     this.style.webkitTransform="rotate(0deg) scale(1,1)";
                     if(this.isturn){
                         backb.style.display="";
                         this.isturn=false;
@@ -170,26 +183,31 @@
                     break;
                 case 7:
                     if(i<4){
-                        this.style.transition="left "+(200+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28) "+(700-100*i)+"ms";
+//                        this.style.transition="left "+(200+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28) "+(700-100*i)+"ms";
+                         this.style.webkitTransition="left "+(200+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28) "+(700-100*i)+"ms";
                         setPostion(this,new Point(-18,1));
                     }
                     else{
-                        this.style.transition="left "+(900-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28) "+(700-100*i)+"ms";
+//                        this.style.transition="left "+(900-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28) "+(700-100*i)+"ms";
+                         this.style.webkitTransition="left "+(900-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28) "+(700-100*i)+"ms";
                         setPostion(this,new Point(18,1));
                     }
                     break;
                 case 8:
                     if(i<4){
-                        this.style.transition="left "+(800-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                        this.style.transition="left "+(800-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                         this.style.webkitTransition="left "+(800-100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
                         setPostion(this,new Point(3*i-10.5,1));
                     }
                     else{
-                        this.style.transition="left "+(100+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+//                        this.style.transition="left "+(100+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
+                         this.style.webkitTransition="left "+(100+100*i)+"ms cubic-bezier(0.17,0.89,0.32,1.28)";
                         setPostion(this,new Point(3*i-10.5,1));
                     }
                     break;
                 case 9:
-                    this.style.transition="left 200ms ease-out "+(200*i)+"ms,top 300ms ease-out "+(200*i)+"ms";
+//                    this.style.transition="left 200ms ease-out "+(200*i)+"ms,top 300ms ease-out "+(200*i)+"ms";
+                     this.style.webkitTransition="left 200ms ease-out "+(200*i)+"ms,top 300ms ease-out "+(200*i)+"ms";
                     setPostion(this,pointarray[i]);
                     break;
                 case 11:
