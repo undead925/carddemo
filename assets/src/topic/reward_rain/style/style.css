@@ -1,0 +1,108 @@
+body,html,ul,li,img,div,a{ -webkit-touch-callout: none; -webkit-user-select: none; touch-callout: none; user-select : none; }
+.w-100{ width: 100%; }
+html,#page,.main{ background-color: #bd3329; height: 100%; }
+.main{ position: relative; margin-left: auto; margin-right: auto; padding: 50px 0 20px; max-width: 640px; }
+.main .a-rule{ position: absolute; right: 0; top: 20px; padding: 3px 10px 3px 15px; border: 1px solid #971a11; border-right: 0; border-radius: 10px 0 0 10px; background-color: #971a11; color: #fff; opacity: 0.7; }
+.main .a-back{ left: 10px; top: 18px; height: 28px; width: 28px; line-height: 28px;  border: 1px solid #971a11; border-radius: 26px; background-color: #971a11; color: #fff; opacity: 0.7; text-align: center; }
+.banner{ position: relative; }
+
+.reward-text{ position: absolute; left: 0; top: 60.2%; padding: 0 25%; width: 50%; color: #713006; line-height: 1; }
+.ft-1,.ft-2,.ft-3{ white-space: nowrap; }
+.ft-1{ padding-left: 25%; font-size: 18px; }
+.ft-2{ padding-left: 18%; font-size: 19px; padding-top: 2%; }
+.ft-3{ padding-left: 10%; font-size: 20px; padding-top: 2%; }
+
+/* 页面倒计时 */
+.count-down{ display: block; margin: 10px 20px; padding: 6px 10px; font-size: 16px; border-radius: 5px; background-color: #9b2c24; color: #ffe464; text-align: center; }
+
+/* 英雄榜 */
+.world-heroes{ position: relative; margin-left: 20px; margin-right: 20px; }
+.world-heroes-wrap{ position: absolute; left: 30%; top: 50%; margin-top: -15px; overflow: hidden; width: 65%; height: 30px; text-align: left;}
+.world-heroes-roll{ position: relative; }
+.world-heroes-roll ul{ position: absolute; height: 90px;  }
+.world-heroes-roll ul li{ line-height: 30px; height: 30px; font-size: 16px; color: #fff; }
+
+/* 最后倒计时 */
+.game-countdown{ position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: none; background-color: rgba(0,0,0,0.8); background-image: url(../images/countdown_bg.png); background-repeat: no-repeat; background-size: 100% 100%; }
+.game-countdown span{  display: block; position: absolute; left: 0; top: 30%;width: 100%; height: 100%; text-align: center; font-size: 10rem; color: #f67421; }
+
+/* 登录按钮  */
+.btn-login{ display: block; margin: 10px 20px; padding: 6px 10px; font-size: 18px; border-radius: 5px; background-color: #ffe464; color: #d4651d; text-align: center;   }
+
+/* 抓红包 */
+.game{ position: fixed; left: 0px; top: 0px; background-color: rgba(0, 0, 0, 0.8); width: 100%; height: 100%; z-index: 999; }
+.game .reward-gift{ outline: none; border: none; position: fixed; width:150px; height:150px; }
+.game .countdown{ display: block; position: absolute; right: 5px; top: 5px; border-radius: 30px; width: 30px; height: 30px; color: #fff; background-color: rgba(255,255,255,0.3); text-align: center; line-height: 30px; font-size: 14px; }
+.game .countdown span{ -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 255, 200, 1)), to(rgba(239, 130, 35, 1))); }
+.game .reward-number{ position: absolute; top: 0px; left: 0px; padding: 8px 10px; background-color: rgba(255,255,255,0.2); border-radius: 0 0 15px 0 }
+.game .reward-number i{ width: 18px; height: 21px; display: inline-block; margin-right: 5px; vertical-align: top; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAlCAYAAAAjt+tHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABJ9JREFUeNrsVktsVFUY/ubOnXtnpp12pu/SDqW1GKykLX2QEGgwMUYxUVgYw0IX7tRoCDYujCbEhWukDaG4coWPREJU4kKxAnHRYAhabVok2jiNlCkz7bTTed651++cO4MWh7ZpLbjoydzMzX/+73zf+R/nXEdsL54cX8RQJItKxQHwt+FDcOSASM7Eq+q8gY9CaQTcCqBywroP5CkTKFXh43NAqdHgay8FDDJnrY2NgCQnh5Mvj5YAu8oQVhiKZKsX2ElD1tw4EWLNNNdmoNFVBlRrkktRczSmqOIhinDQ6+e4nQbN8d+lo0Au/rt8QB3JF3P2nCqM3DiSNLR4bKdRisgUE5F3NpJUP8/XtG1WdMDFXake2Fu0ipBb9s7r9b/JpYDCS0FEs8eOxE8LS0U4FJs0EwPKWnXUP74dntpKyZCcjiJ67ToWbqShldtiLHPpzjtpq7uLfImAf4rY5rZBBRE6vRLT/PcraH/3EBqf3QstWMvdevPABDKhW5j6/Hv8evIckrdMeOtIbtjR6GTYt5A8kft3etS7DUKEcNyaFzG6CMzfBALbfOj5oB++jo58YLNA+Kb96lSgNT2Mlte7Ub1vJ668fBxzkwvQa0jODtvitjdWbKjFjFY+EkECcxQwEVDRM/QGybsYwxnMDF9lShRUPdELxJgXXwmiF4ZhxJOoOXgIu087cPnwe9gBAw158nsVtHKvyi2IqGOhPXbkKfh2dQO3pwCvjvRcHCNHB5Fi2OGvgkniH94awmIoTMURlHZ2S4zALke+rACZjhTBQR3uA/u5MHdqcanIPBpfeAY1e9owfvwTxrABEyc+Rdn2IJpfe54RiUlfDzECK9bAWgWARai0NTOJLLh4wm4PQ1SWgd7TbyIVieHPs2dYoBHsfv+IjckYti8xEruwDgEWW8BRGWAvstqzhm30+ZC4No7JM5ek7corp5CeiSH01QhSYzc4n/clRmDFGmuPgMyDtfRkUVUYi0ncvjwKb30lSprc8NYEEBkZ4wGVkfN3qshc+SxVlz1C2btWeIaVxFbQXAwvWy+dhl4dQOPBPciEw4iMTSLQ0Qqd54LmZ8+lM7YvMQIr1li7AB4guV8mYU1OwbGjhV0wyy7wIsHqnzhxDqo7AyPK8J+9CMulof3tF6FtrZVRsMZ/k1ixxtpTICIwnUP2i2+ohme00wlEowj0PoL93w6gZ6AfSoUf3YNH0Xd+EOVtTeyCuPQVGIGFvs4acLAGMx9/h9zwMFDRYOc4zVTMhXn56Og+9hK0Ep42s9N2zquC0ldgBHalsXIRemTXIfXOKRgXvqaIKl7mlbIlnST293XAWcGbxl8m54SP8BUYiV1PERYuB7ETay6LVP8AXM/9CNfTfVBagkC5z24QFqc58Tuy5y8h+9nFOxh5sawU4fg+zIvuXlWseKqZrEOFAVB48jmq/PJisiKzMK+HYEZoF8Tu1ZFzHFNX/VkjFuSXjFIHeUfnrob4H7LnaHeU5uesVZOvMgXFbikXihfYGr7hFDzgsSlgU8CmgE0B/wsBngfI71Gw4ofzho4/xGV0mM9JPrX3mfxLPh/+JcAAf7u3z4h9JH4AAAAASUVORK5CYII=); background-size: 18px 21px; }
+.game .reward-number span{ vertical-align: middle; font-size: 16px; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 255, 200, 1)), to(rgba(239, 130, 35, 1))); }
+
+/* 弹出层  */
+.layer-result{ padding: 25px 0; border: 5px solid #fd4f4f; background-color: #fff; text-align: center; }
+.layer-result-title{ font-size: 24px; font-weight: normal; text-align: center; color: #666; }
+.layer-result-tips{ padding-top: 10px; font-size: 18px; text-align: center; color: #666; }
+.layer-result-pic{ padding: 20px; position: relative; }
+.layer-result-pic .hongbao{ margin-left: 5%; width: 95%; }
+.layer-result-pic ul{ color: #fff; position: absolute; left: 0; bottom: 35%; width: 100%; text-align: center; font-size: 18px; line-height: 1.6; }
+.btn-result{ display: inline-block; margin-left: auto; margin-right: auto; width: 60%; height: 40px; line-height: 40px; font-size: 16px; border-radius: 5px; text-align: center; color: #f4514a; background-color: #ffdc4e; }
+.layer-result.over{ position: relative; }
+.layer-result.over .layer-result-title{ position: absolute; left: 0; top: 15px; width: 100%; z-index: 100; line-height: 1.5; }
+.layer-result.over .layer-result-pic{ padding-top: 30px; }
+
+/* 活动规则 */
+.layer-result.rule{ text-align: center; padding: 20px 0; }
+.closediy{  display: block; position: absolute; z-index: 500; right: -12px; top: -12px; width: 30px; height: 30px; background-image: url(../images/close_rule.png); background-size: 30px 30px; }
+.rule h2{ display: inline-block; margin-left: auto; margin-right: auto; width: 40%; height: 30px; line-height: 30px; font-size: 14px; border-radius: 5px; text-align: center; color: #f4514a; background-color: #ffdc4e; margin-bottom: 5px; }
+.rule ol{ padding: 5px 15px 5px 30px; list-style-type: decimal; text-align: left; line-height: 1.4; }
+.rule ol li{ padding-bottom: 3px; }
+.rule ol ol{ padding-left: 16px; list-style-type: lower-latin; }
+.rule p{ width: 95%; margin-left: auto; margin-right: auto; padding-top: 10px; border-top: 1px solid #ff7373; }
+
+@media (max-width: 580px){
+	.ft-1{ font-size: 14px; }
+	.ft-2{ font-size: 15px; padding-top: 2%; }
+	.ft-3{ font-size: 16px; padding-top: 2%; }
+}
+@media (max-width: 500px){
+	.reward-text{ top: 60.2%; }
+	.ft-1{ font-size: 13px; }
+	.ft-2{ font-size: 14px; padding-top: 2.8%; }
+	.ft-3{ font-size: 15px; padding-top: 2%; }
+}
+@media (max-width: 450px){
+	.reward-text{ top: 60.0%; }
+	.ft-1{ font-size: 12px; }
+	.ft-2{ font-size: 13px; padding-top: 2.5%; }
+	.ft-3{ font-size: 14px; padding-top: 2.8%; }
+}
+@media (max-width: 420px){
+	.reward-text{ top: 59.6%; }
+	.ft-1{ font-size: 12px; }
+	.ft-2{ font-size: 13px; padding-top: 2.8%; }
+	.ft-3{ font-size: 14px; padding-top: 2.6%; }
+}
+@media (max-width: 380px){
+	.reward-text{ top: 59.5%; }
+	.ft-1{ font-size: 12px; }
+	.ft-2{ font-size: 12px; padding-top: 2%; }
+	.ft-3{ font-size: 12px; padding-top: 2%; }
+	.layer-result{ padding: 10px 0; }
+	.layer-result-title{ font-size: 18px; }
+	.layer-result-tips{ padding-top: 0; font-size: 14px; }
+	.layer-result-pic{ padding: 10px; }
+	.layer-result-pic ul{ bottom: 30%; font-size: 14px; }
+	.btn-result{ height: 32px; line-height: 32px; font-size: 14px; }
+	.layer-result.over .layer-result-pic{ padding-top: 20px; }
+	.world-heroes-wrap{ height: 20px; margin-top: -10px; }
+	.world-heroes-roll ul li{ font-size: 12px; height: 20px; line-height: 20px; }
+	.rule{ font-size: 12px; }
+	.layer-result.rule{ text-align: center; padding: 15px 0; }
+	.count-down{ font-size: 14px; }
+}
+@media (max-width: 340px){
+	.reward-text{ top: 59%; }
+	.ft-1{ font-size: 12px; }
+	.ft-2{ font-size: 12px; padding-top: 2%; }
+	.ft-3{ font-size: 12px; padding-top: 2%; }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>邀请好友-用户中心</title>
+	<meta name="keywords" content="祺天优贷"/>
+    <meta name="description" content="祺天优贷"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../../../css/mobile.css">
+</head>
+<body>
+    <div id="m">
+        <header id="header">
+            <a href="javascript:history.back();" class="a-back"><i class="qtydfont">&#xe623;</i>返回</a>
+            <h1 class="primary-title">邀请好友</h1>
+            <span class="icon-primary-nav qtydfont" id="icon-primary-nav">&#xe603;</span>
+            <nav class="primary-nav-group">
+                <a href="main.html"><i class="qtydfont">&#xe60d;</i>账户管理</a>
+                <a href="recharge.html"><i class="qtydfont">&#xe613;</i>充值</a>
+                <a href="bank.html"><i class="qtydfont">&#xe607;</i>银行卡</a>
+                <a href=""><i class="qtydfont">&#xe600;</i>我的交易</a>
+                <a href=""><i class="qtydfont">&#xe612;</i>邀请好友</a>
+                <a href=""><i class="qtydfont">&#xe618;</i>安全退出</a>
+            </nav>
+        </header>
+
+
+        <div id="body" class="be-tool">
+
+            <div class="tabfixed">
+                <ul class="tabfixed-two">
+                    <li class="current"><a href="invite.html">邀请好友</a></li>
+                    <li><a href="invite-log.html">好友列表</a></li>
+                </ul>
+            </div>
+
+            <div class="invite-log cl">
+                <div class="qtydfont">&#xe612;</div>
+                <p class="mt5"><label class="c-666">共获邀请红包：</label><span><em class="c-red ft16">200.00</em> 元</span></p>
+                <p><label class="c-666">成功邀请好友：</label><span class="c-333">4人</span></p>
+            </div>
+
+            <div class="invite-links">
+                <div class="invite-links-title">1.邀请好友链接</div>
+                <div class="form-item"><label class="fl ft12">https://www.qtyd.com/12e23</label><span class="ui-form-item-value"><a href="" class="btn-primary fr">复制链接</a></span></div>
+            </div>
+
+            <div class="invite-links">
+                <div class="invite-links-title">2.扫一扫二维码</div>
+                <div class="invite-links-qrcode form-item">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPxQTFRFxwAL/v7+/v39xgAKyAcR++/w3GdrxwMOxwUO+OHi997f/vz8/fr6+ejo1UNK1EFI0TQ7zyszyhAZyQwX4oSI8cLD+enp4oGFzywzyxsi8sfJ2l9k/ff49+Dh+ODh88/Q4X6CxwEL9dXWzSEq66yuyhUd9trc0z1Ezyoy55qc6Jqe+OXmxwQNziYuyQ4Y99/g+OLj++7v+/DxyAYQ5pSX0DA2/vv7zBki9NHS2FdbziUt4Hh9zSAo993ezB0m6qao5Y+SzB0l+OLiyg8a+eXm/fn51kpQ2Vpf0jY+9+Hh0zxD+/Hy9tzd6J+iyAkS5pWZxwMN8MDC////AAAAJdWlIwAAAs9JREFUeNrs2mdb2zAQAOBz2KtAGaUTStm7QEs3tFBoyygc//+/IInESR7dSbIIMjw5fYgd2/ErO4p0vgiunQVVyVea3tCHNR6K1mFWAdHL1JEslt50KF9Jayt/etHbXSdPR+4gtnhrTJ9E9AesW6e2Wx7dq4n+qHV+jEN3fyK66D6d/WBT3ej2Tv8AWjLCin5/emBEbTW0wD2tiedFb6mOYYUMZ67dPY2/iF6azj+g8MGO+zCyu6Kboeii+4Jovkfjq8QH3nSbFz21XqwVMX0dWVv+AkUvX3dD7oHP/TjN1030SJ2uTBI96wZdPvy+q+7Jv1BVqUC9TNbPxw5pIU9SwfqzKtxhXtfT6k+0Wbldf6dWO1Pq5wpcQNw/GKx9CT8jdT6twSZLMsUNYo+56SfV958cP0j+mmJ0hb3YyttcF+KAWqTUj87Mrl7NP0ccAfiVSL8C2DY7hsa7X5vL1xXqjdbt3IgrJV+9zfMAfWoxZnizzdXl0gFSrJ7lX/UGwCXuJNWHcnwT4AJxKamub7e+77gLMKMWnUn1fs3P4SrAcFb9GeD3CJ1/VuLGumWAU3yv+cN6iPQlO85ceT6aiNDVhb69bXYAT2vb9mACU+nQrxafobGsYCJdX/ZHvfKtjlcwSnfPFKAjp/+Ke2M2Tf/Q9B/860rv8BFTlI7/FLmWX+7sYg+m1PFrU2wziml1HOiAxjE2VqdBV+K91vZeGnrqVePJ/ak9+wk6SidH1PvXGd8dy4teQOenMPkzeYFZINEfhk4m4dAfo9CZPDaaZvo60cvS/dPD3IOY588/68Oit6le8G/IotMc2akKKHqpeoG5B/x0A342Cj9Qil66Hjg9LPB/QvJ4+hJEL1/3T0al9cAEP9mORRfdpwfOffMn/UR/DLonPuFno/gfq0QvX/fPZA44jA2G6TYpehvrBSLqwNm2dJ72zvG86K3SbwQYAAZOUPTUnSFWAAAAAElFTkSuQmCC">
+                    <p class="mt10">2015让红包飞，扫码有惊喜!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navfixed">
+            <ul>
+                <li>
+                    <a href="../home.html">
+                        <i class="qtydfont home">&#xe604;</i>
+                        <span class="ui-navbar-label">首 页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../invest.html">
+                        <i class="qtydfont invest">&#xe661;</i>
+                        <span class="ui-navbar-label">投 资</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../invest.html">
+                        <i class="qtydfont invest">&#xe656;</i>
+                        <span class="ui-navbar-label">活 动</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="main.html" class="current">
+                        <i class="qtydfont member">&#xe60d;</i>
+                        <span class="ui-navbar-label">账 户</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script src="../../../lib/sea.js"></script>
+<script>seajs.use("page/mobile/common.js")</script>
+</body>
+</html>

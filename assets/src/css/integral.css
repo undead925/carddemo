@@ -1,0 +1,59 @@
+/* === 积分列表页面 === */
+.integral-total{ padding: 15px; padding-top: 50px; overflow: hidden; background-color: #fff; }
+.integral-total li{ float: left; width: 50%; text-align: center; }
+.integral-total li span{ display: block; color: #ff6600; font-size: 22px; }
+.integral-total li em{ display: block; color: #999; }
+
+.integral-list{ padding-top: 15px; }
+.integral-list-head{ padding:0 15px 5px; font-size: 14px; font-weight: normal; color: #666; }
+.integral-list-body{ position: relative; margin-bottom: 15px; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; background-color: #fff; }
+.integral-list-item{ position: relative; overflow: hidden; padding: 15px; }
+.integral-list-item:after{ display: block; content: " "; position: absolute; left: 15px; bottom: 0; width: 100%; border-bottom: 1px solid #e5e5e5; }
+.integral-list-item:last-child:after{ display: none; border-bottom: none; }
+.integral-list-item dl{ float: left; width: 70%; }
+.integral-list-item dl:last-child{ width: 30%; text-align: right; }
+.integral-list-item dt{ font-size: 14px; color: #666; white-space: nowrap;}
+.integral-list-item dd{ font-size: 12px; color: #999; white-space: nowrap; }
+.integral-list-item span{ position: absolute; right: 15px; top: 50%; margin-top: -10px; color: #808080; font-size: 16px; }
+
+/* === 赚积分页面 === */
+.integral-group{ position: relative; }
+.integral-head{ position: relative; padding: 0 15px; height: 40px; line-height: 40px; background-color: #fff; border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; font-weight: normal; font-size: 15px; }
+.integral-head-link{ padding-right: 15px; float: right; color: #999; font-size: 13px; }
+.integral-head-link i{ font-size: 16px; position: absolute; right: 15px; top: 0; }
+.integral-body{ width: 100%; overflow: hidden; background-color: #f5f5f5; padding: 15px; -webkit-box-sizing: border-box; box-sizing:border-box; }
+
+/* 任务赚积分 */
+.task-item{ float: left; display: block; width: 33.333%; margin-bottom: 10px; text-align: center; }
+.task-item i{ display: inline-block; width: 65%; position: relative; }
+.task-item i img{ width: 100%; display: block; overflow: hidden; }
+.task-item i em{ position: absolute; top: 0; right: -10px; border: 1px solid red; border-radius: 10px; padding: 0 5px; white-space: nowrap; background-color: #fff; }
+.task-item:nth-child(1) i em{ border-color: #ff98e8; color: #ff98e8 }
+.task-item:nth-child(2) i em{ border-color: #6cac61; color: #6cac61 }
+.task-item:nth-child(3) i em{ border-color: #55a1dc; color: #55a1dc }
+.task-item:nth-child(4) i em{ border-color: #e4b95b; color: #e4b95b }
+.task-item:nth-child(5) i em{ border-color: #ff6a6a; color: #ff6a6a }
+.task-item span{ display: block; line-height: 1.5; }
+.task-item.finish span{ color: #999; }
+.task-item.finish i em{ display: none; }
+
+/* 投资赚积分 */
+.invest-gain dl{ padding-left: 15px; }
+.invest-gain dl dt{ font-size: 12px; color: #666; }
+.invest-gain dl dt span{ font-size: 14px; color: #f60; }
+.invest-gain dl dd{ margin-top: 5px; padding: 4px 8px; border: 1px solid #e6e6e6; background-color: #fff; border-radius: 10px; color: #4c4c4c; }
+.invest-gain ol{ margin-top: 15px; padding-left: 15px;  color: #4c4c4c; }
+.invest-gain ol li{ position: relative; padding-bottom: 5px; }
+.invest-gain ol li:after{ position: absolute; left:-15px; top: 6px; display: block; content: " "; width: 5px; height: 5px; border-radius: 5px; background-color: #999; }
+
+/* 邀请好友赚 */
+.invite-item{ float: left; width: 50%; display: block; text-align: center; padding-bottom: 40px; }
+.invite-item i,.invite-item span{ display: block; text-align: center; width: 80%; margin: 0 auto; }
+.invite-item i{ margin-bottom: 5px; }
+.invite-item i img{ width: 100%; }
+
+
+/* 底部固定赚积分按钮 */
+.integral-footer-fixed{ display: none; position: fixed; bottom: 0; left: 0; width: 100%; height: 35px; padding-top: 5px; background-color: #fff; }
+.integral-footer-fixed li{ float: left; width: 50%; text-align: center; }
+.integral-footer-fixed li a{ display: block; margin: 0 auto; width: 50%; border-radius: 10px; padding: 0 15px; height: 30px;  line-height: 30px; background-color: #ff1919; color: #fff; }

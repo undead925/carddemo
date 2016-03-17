@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>祺天优贷-用户充值</title>
+	<meta name="keywords" content="祺天优贷"/>
+    <meta name="description" content="祺天优贷"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../../../css/mobile.css">
+</head>
+<body>
+    <div id="m">
+        <header id="header">
+            <a href="javascript:history.back();" class="a-back"><i class="qtydfont">&#xe623;</i>返回</a>
+            <a href="" class="a-left-link hide">注册</a>
+            <h1 class="primary-title">充值</h1>
+        </header>
+        <div id="body">
+            <div class="form">
+
+                <div class="bank-tips red">通知：招商银行于<span>2015-09-09 09:25:00</span>至<span>2015-09-10 09:25:00</span> 进行系统升级，请稍后再试！</div>
+                <!-- <div class="bank-card-owner"><span class="c-999">持卡人：</span> 歐陽瘋</div> -->
+                <!-- <div class="form-group">
+                    <div class="bank-card-group">
+                        <section class="bank-list-item bank-list-tips ">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                            <span class="bank-list-more card-type"><i class="qtydfont">&#xe657;</i>安全卡</span>
+                            <p class="bank-list-tips-txt"></p>
+                        </section>
+                    </div>
+                    <div class="form-tips mt5 c-999 ft12">首次帮卡充值限额500元<br>之后单笔限额：5万  每日限额：100万</div>
+                </div> -->
+
+                <div class="form-group">
+                    <div class="bank-card-group">
+                        <section class="bank-list-item selected">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name quick-card">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                            <!-- <p class="bank-list-tips-txt">招商银行于2015-09-09 09:25:00至2015-09-10 09:25:00 进行系统升级，请稍后再试！</p> -->
+                            <span class="bank-list-up c-red">升级中</span>
+                        </section>
+                        <section class="bank-list-item ">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name quick">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                        </section>
+                        <section class="bank-list-item ">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name quick">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                <div class="form-item-group pr30"><label class="form-label">金&nbsp;&nbsp;&nbsp;额</label><input type="number" class="ui-input-text" placeholder="输入充值金额 ≥ 1.01 元"><i class="form-right-unit">元</i></div>
+                    <div class="form-tips mt5 c-999 ft12">存钱罐可用余额：19545.00 元</div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-item-group"><label class="form-label">验证码</label><input type="number" class="ui-input-text" placeholder="输入验证码"><button class="btn-captcha">获取验证码</button></div>
+                </div>
+
+                <div class="form-group protocol">
+                    <label for="checkbox">同意</label><a href="javascript:;" id="j-protocol" class="c-secondary">新浪支付快捷服务协议</a>
+                </div>
+
+                <div class="form-btn ">
+                    <button class="btn-primary" id="j-recharge">下一步</button>
+                    <!-- <button class="btn-primary mt10" id="j-recharge2">提 交 成功</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../../lib/sea.js"></script>
+<script>seajs.use("page/mobile/member/recharge.js")</script>
+</body>
+</html>

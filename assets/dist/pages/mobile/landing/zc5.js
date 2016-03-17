@@ -1,0 +1,1 @@
+define(function(require){var e=require("jquery");require("regex");var r=require("layer.m/1.6/layer.m")});

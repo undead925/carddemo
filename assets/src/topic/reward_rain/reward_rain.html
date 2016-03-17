@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>周年庆</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+	<script src="jquery.min.js"></script>
+	<style type="text/css">
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, font, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+		}
+		.mc{
+			position: fixed;
+			left:0px;
+			top:0px;
+			background-color: rgba( 0,0,0,0.5);
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+		}
+		.container{
+			z-index: 1;
+			position: fixed;
+			width:1200px;
+			height:12000px;
+		}
+		.reward-gift{ outline: none; border: none; position: fixed; width:100px;height:100px; }
+	</style>
+	</head>
+	<body>
+		<div clsss="container">1234235539475937593749573894</div>
+		<div class="mc"></div>
+		<script type="text/javascript">
+		    $(function(){
+		    	var start_time = new Date().getTime();
+		    	var counter = 1;
+		    	var rain = setInterval(function(){
+		    		var end_time = new Date().getTime();
+		    		if(end_time - start_time >= 30000){
+		    			clearInterval(rain);
+		    		}else{
+		    			var top = parseInt(Math.random()*100);
+		    			var html = "";
+		    			if(top >= 50){
+		    				html = "<div id='"+counter+"' class='reward-gift' style='opacity:1;bottom:"+(100 - top)+"%;";
+		    			}else{
+		    				html = "<div id='"+counter+"' class='reward-gift' style='opacity:1;top:"+top+"%;";
+		    			}
+		    			var left = parseInt(Math.random()*100);
+		    			if(left >= 50){
+		    				html += "right:"+(100 - left)+"%;background: url(1.png) no-repeat center top;background-size: 100%;'></div>";
+		    			}else{
+		    				html += "left:"+left+"%;background: url(1.png) no-repeat center top;background-size: 100%;'></div>";
+		    			}
+		    			$(".mc").append(html);
+		    			$("#"+counter).bind("touchstart", function(){
+		    				var id = $(this).attr("id");
+		    				$(this).unbind("touchstart");
+		    				$(this).stop();
+		    				$(this).css("background-image", "url(2.png)");
+		    				$(this).css("opacity", 1);
+		    				setTimeout(function(){
+		    					$("#"+id).remove();
+		    				}, 1500);
+		    			})
+		    			$("#"+counter).animate({opacity:"0"},  {duration: 3000, queue: false, complete: function(){$(this).remove();}});
+		    			counter++;
+		    		}
+		    	}, 1000);
+		    })
+		</script>
+	</body>
+</html>

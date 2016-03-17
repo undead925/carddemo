@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>祺天优贷-用户提现</title>
+	<meta name="keywords" content="祺天优贷"/>
+    <meta name="description" content="祺天优贷"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="mobile">
+    <link rel="stylesheet" href="../../../css/mobile.css">
+</head>
+<body>
+    <div id="m">
+        <header id="header">
+            <a href="javascript:history.back();" class="a-back"><i class="qtydfont">&#xe623;</i>返回</a>
+            <h1 class="primary-title">提现</h1>
+            <span class="icon-primary-nav qtydfont hide" id="icon-primary-nav">&#xe603;</span>
+            <nav class="primary-nav-group">
+                <a href="main.html"><i class="qtydfont">&#xe60d;</i>账户管理</a>
+                <a href="recharge.html"><i class="qtydfont">&#xe613;</i>充值</a>
+                <a href="bank.html"><i class="qtydfont">&#xe607;</i>银行卡</a>
+                <a href=""><i class="qtydfont">&#xe600;</i>我的交易</a>
+                <a href=""><i class="qtydfont">&#xe612;</i>邀请好友</a>
+                <a href=""><i class="qtydfont">&#xe618;</i>安全退出</a>
+            </nav>
+        </header>
+        <div id="body">
+            <div class="form cash">
+                <!-- <div class="form-head">确认银行卡信息</div> -->
+                <div class="form-group">
+                    <div class="bank-card-group">
+                        <section class="bank-list-item ">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                            <span class="bank-list-more card-type"><i class="qtydfont">&#xe657;</i>安全卡</span>
+                        </section>
+                    </div>
+                    <div class="form-tips mt5 c-999 ft12">首次帮卡充值限额500元<br>之后单笔限额：5万  每日限额：100万</div>
+                </div>
+
+                <div class="form-group">
+                    <div class="bank-card-group">
+                        <section class="bank-list-item selected">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                            <span id="j-bank-list-more" class="bank-list-more"><i class="qtydfont"></i></span>
+                        </section>
+                        <section class="bank-list-item ">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                        </section>
+                        <section class="bank-list-item ">
+                            <i class="bank-list-logo qtydfont">&#xe649;</i>
+                            <h3 class="bank-list-name">招商银行</h3>
+                            <p class="bank-list-number">尾号3123</p>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-item-group"><label class="form-label">到账时间</label><span class="form-value c-666">预计2015年5月19日24点 前</span></div>
+                    <p class="pl15 c-999 ft12">可提余额：<em class="c-red">999.00</em> 元</p>
+                    <p class="pl15 c-999 ft12">15:00之前的提现申请，预计到账时间为T+1日，<br>15:00之后的提现申请，预计到账时间T+2日</p>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-item-group"><label class="form-label">提现金额</label><input type="text" class="ui-input-text" placeholder="请输入提现金额"></div>
+                    <p class="pl15 c-999 ft12">单笔限额：5万，每日限提：10次</p>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-item-group"><label class="form-label">支付密码</label><input type="text" class="ui-input-text" placeholder="请输入支付密码"></div>
+                    <p class="pl15 ft12 c-999">提现手续费：<del>¥ 2.00</del> 由平台代付</p>
+                </div>
+                <div class="form-btn ">
+                    <button class="btn-primary" id="">提 交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../../../lib/sea.js"></script>
+<script>seajs.use("page/mobile/member/recharge.js")</script>
+</body>
+</html>

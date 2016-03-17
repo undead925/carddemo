@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<link rel="stylesheet" href="/assets/dist/css/mobile.css">
+	<link rel="stylesheet" href="/assets/dist/css/integral.css">
+</head>
+<body>
+	<div id="m">
+		<header id="header">
+			<a href="javascript:history.back();" class="a-back"><i class="qtydfont">&#xe623;</i>返回</a>
+			<h1 class="primary-title" id="j-project-nav">赚积分 <i id="j-project-nav-i" class="qtydfont ml5">&#xe61f;</i></h1>
+			<nav class="project-nav">
+				<a data="0" href="/phone/borrow/borrow_list?borrow_type=0" class="current">全部项目</a>
+				<a data="1" href="/phone/borrow/borrow_list?borrow_type=1">新手标</a>
+				<a data="246" href="/phone/borrow/borrow_list?borrow_type=246">新车贷</a>
+				<a data="245" href="/phone/borrow/borrow_list?borrow_type=245">祺天车贷</a>
+				<a data="247" href="/phone/borrow/borrow_list?borrow_type=247">祺天房贷</a>
+				<a data="247" href="/phone/borrow/borrow_list?borrow_type=565">票据贷</a>
+			</nav>
+			<span class="icon-primary-nav qtydfont" id="icon-primary-nav">&#xe603;</span>
+			<nav class="primary-nav-group">
+				<a href="/phone/welcome"> <i class="qtydfont"></i>
+					首页
+				</a>
+				<a href="/phone/user/login.html">
+					<i class="qtydfont"></i>
+					登录
+				</a>
+				<a href="/phone/user/reg/">
+					<i class="qtydfont"></i>
+					注册
+				</a>
+				<a id="nav_calc" href="javascript:void(0);">
+					<i class="qtydfont"></i>
+					收益计算器
+				</a>
+			</nav>
+		</header>
+		<div id="body">
+			<div class="integral-group">
+				<h3 class="integral-head">一、任务赚积分</h3>
+				<div class="integral-body task-gain">
+					<a href="###" class="task-item "><i><em>领取</em><img src="/assets/src/images/moblie/integral/integral_unchecked_1.png"></i><span>实名认证</span></a>
+					<a href="###" class="task-item"><i><em>领取</em><img src="/assets/src/images/moblie/integral/integral_unchecked_2.png"></i><span>绑定邮箱</span></a>
+					<a href="###" class="task-item"><i><em>领取</em><img src="/assets/src/images/moblie/integral/integral_unchecked_3.png"></i><span>开通快捷支付</span></a>
+					<a href="###" class="task-item"><i><em>领取</em><img src="/assets/src/images/moblie/integral/integral_unchecked_4.png"></i><span>完善信息</span></a>
+					<a href="###" class="task-item"><i><em>领取</em><img src="/assets/src/images/moblie/integral/integral_unchecked_5.png"></i><span>体验APP</span></a>
+				</div>
+			</div>
+			<div class="integral-group">
+				<h3 class="integral-head"><a href="" class="integral-head-link">立即投资<i class="qtydfont">&#xe628;</i></a>二、投资赚积分</h3>
+				<div class="integral-body invest-gain">
+					<dl>
+						<dt><span>1元收益额 = 1积分</span>（取整）</dt>
+						<dd>例：投资1000元，收益为18.75元，则获得18积分。</dd>
+					</dl>
+					<ol>
+						<li>注册当天投资 得 500积分；</li>
+						<li>还款当天续投 得 200积分（自然月内限3次，每天限1次）；</li>
+						<li>累计投资额&nbsp;&nbsp;&nbsp;满1万元&nbsp;&nbsp;&nbsp;&nbsp;得&nbsp;&nbsp;100积分;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满3万元&nbsp;&nbsp;&nbsp;&nbsp;得&nbsp;&nbsp;300积分;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满10万元&nbsp;&nbsp;得&nbsp;&nbsp;1000积分;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;满50万元&nbsp;&nbsp;得&nbsp;&nbsp;5000积分。
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="integral-group">
+				<h3 class="integral-head"><a href="" class="integral-head-link">邀请好友 <i class="qtydfont">&#xe628;</i></a>三、邀请赚积分</h3>
+				<div class="integral-body invite-gain">
+					<a href="" class="invite-item"><i><img src="/assets/src/images/moblie/integral/pic_01.png"></i><span>邀请好友注册认证最多领取4000积分</span></a>
+					<a href="" class="invite-item"><i><img src="/assets/src/images/moblie/integral/pic_02.png"></i><span>好友首次投资最多领取10000积分</span></a>
+				</div>
+			</div>
+
+			<ul class="integral-footer-fixed" id="integral-footer-fixed">
+				<li><a href="">投资赚积分</a></li>
+				<li><a href="">邀好友赚积分</a></li>
+			</ul>
+			<script type="text/javascript" src="/assets/dist/lib/sea.js"></script>
+			<script>seajs.use("page/mobile/member/integral")</script>
+		</div>
+	</div>
+</body>
+</html>

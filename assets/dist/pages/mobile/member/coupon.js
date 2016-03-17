@@ -1,0 +1,1 @@
+define(function(require,exports,module){var e=require("jquery");require("../common");e(function(){e("#header h1").text("我的年化券");e("#header a").eq(0).attr("href","/phone/account/").html('<i class="qtydfont">&#xe623;</i>返回')})});

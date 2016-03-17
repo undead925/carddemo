@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>项目详细</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+	<link rel="stylesheet" href="../../css/mobile.css">
+    <style>
+        .grow-div{
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            background-image: url("33.png");
+            background-size: 100% 100%;
+        }
+        .grow-div ul{
+            position: relative;
+            width: 1000px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .grow-div ul li{
+
+            float: left;
+        }
+        .grow-div ul li.level-item{
+            position: relative;
+            width: 114px;
+            height: 200px;
+            background-image: url("11.png");
+            background-size: 100% 100%;
+            z-index: 501;
+            position: relative;
+        }
+        .grow-div ul li.level-user{
+            position: relative;
+            width: 245px;
+            height: 200px;
+            background-image: url("22.png");
+            background-size: 100% 100%;
+            z-index: 501;
+            position: relative;
+        }
+        .user-name{
+            height: 30px;
+            position: relative;
+            background-color:  rgb(230,50,50);
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            font-family: SimHei ;
+            color: rgb(255,148,148);
+        }
+        .user-score{
+            height: 70px;
+            width: 100%;
+            position: relative;
+            background-color:  rgb(230,50,50);
+            text-align: center;
+            line-height: 70px;
+            font-size: 25px;
+            font-family: SimHei ;
+            color: rgb(255,255,255);
+        }
+        .user-score>div{
+            height: 70px;
+            width: 50%;
+            position: relative;
+            background-color:  rgb(230,50,50);
+            text-align: center;
+            line-height: 70px;
+            font-size: 25px;
+            font-family: SimHei ;
+            color: rgb(255,255,255);
+        }
+
+        .grow-wdtq{
+            width: 100%;
+            position: relative;
+            background-color: white;
+        }
+        .grow-wdtq-head{
+            width: 100%;
+            height: 90px;
+
+        }
+        .grow-wdtq-title{
+            position: absolute;
+            left: 30px;
+            top:35px;
+            font-size: 28px;
+            font-family: SimHei ;
+        }
+        .grow-wdtq-xm{
+            position: absolute;
+            left:165px;
+            top:45px;
+            font-size: 20px;
+            font-family: SimHei ;
+            color: rgb(255,102,0);
+        }
+        .grow-wdtq-ljtz{
+            position: absolute;
+            right: 24px;
+            top:30px;
+            font-size: 20px;
+            font-family: SimHei ;
+            color: rgb(153,153,153);
+        }
+        .grow-wdtq-ljtz .qtydfont{
+            position: relative;
+            top:3px;
+            font-size: 28px;
+        }
+        .grow-wdtq-list{
+            position: relative;
+            height: 380px;
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+        }
+        .grow-wdtq-list ul{
+            height: 100%;
+
+        }
+        .grow-wdtq-list ul li{
+            width: 25%;
+            height: 190px;
+            float: left;
+            position: relative;
+            border-bottom: 1px solid rgb(224,224,224);
+            border-right: 1px solid rgb(224,224,224);
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .grow-wdtq-round{
+            width: 84px;
+            height: 84px;
+            margin-top:30px;
+            margin-right: auto;
+            margin-left: auto;
+            line-height: 84px;
+            text-align: center;
+            font-family: Cambria;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 25px;
+            color: white;
+            background-color: rgb(204,204,204);
+            border-radius: 100px;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+        }
+        .grow-active .grow-wdtq-round{
+            background: -webkit-linear-gradient(rgb(248,254,136), rgb(226,169,42));
+            border:2px solid rgb(193,116,18);
+
+        }
+        .grow-wdtq-round span{
+           font-size: 20px;
+
+
+        }
+
+        .grow-wdtq-label{
+            margin-top: 19px;
+            text-align: center;
+            font-size: 20px;
+            font-family: SimHei ;
+            color: rgb(153,153,153);
+        }
+        .grow-active .grow-wdtq-label{
+            margin-top: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-family: SimHei ;
+            color: rgb(153,153,153);
+        }
+
+
+
+
+        .grow-czzdt{
+            width: 100%;
+            position: relative;
+            background-color: white;
+            margin-bottom: 60px;
+        }
+
+        .grow-czzdt-head{
+            width: 100%;
+            height:120px;
+            position: relative;
+            border-bottom: 1px solid rgb(209,209,209);
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .grow-czzdt-title{
+            position: absolute;
+            left: 30px;
+            top:35px;
+            font-size: 28px;
+            font-family: SimHei ;
+        }
+        .grow-czzdt-ljtz{
+            position: absolute;
+            right: 24px;
+            top:35px;
+            font-size: 20px;
+            font-family: SimHei ;
+            color: rgb(153,153,153);
+        }
+        .grow-czzdt-ljtz .qtydfont{
+            position: relative;
+            top:3px;
+            font-size: 28px;
+        }
+        .grow-czzdt-time{
+            position: absolute;
+            left: 30px;
+            bottom: 10px;
+            font-size: 18px;
+            font-family: SimHei ;
+            color: rgb(153,153,153);
+        }
+
+        .grow-czzdt-list{
+            position: relative;
+            width: 100%;
+            background-color: white;
+        }
+        .grow-czzdt-list ul{
+
+        }
+        .grow-czzdt-list ul li{
+            position: relative;
+            width: 96%;
+            height: 180px;
+            margin-left: 4%;
+            border-bottom: 1px solid rgb(230,230,230);
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .grow-czzdt-item-icon{
+            position: relative;
+            top:45px;
+            width: 84px;
+            height: 84px;
+            line-height: 84px;
+            text-align: center;
+            font-size: 60px;
+            color: rgb(255,140,64);
+            border: 3px solid rgb(255,140,64);
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .grow-czzdt-item-icon span{
+            position: relative;
+            top:-4px;
+        }
+
+        .grow-czzdt-item-class{
+            position: absolute;
+            left:110px;
+            top:45px;
+            font-size: 23px;
+            font-family: SimHei ;
+            color: rgb(128,128,128);
+        }
+
+        .grow-czzdt-item-time{
+            position: absolute;
+            left:110px;
+            top:105px;
+            font-size: 18px;
+            font-family: SimHei ;
+            color: rgb(178,178,178);
+        }
+
+        .grow-czzdt-item-add{
+            position: absolute;
+            right:50px;
+            top:50px;
+            font-size: 26px;
+            font-family: SimHei ;
+            color: rgb(128,128,128);
+        }
+
+        .grow-czzdt-item-status{
+            position: absolute;
+            right:50px;
+            top:95px;
+            font-size: 26px;
+            font-family: SimHei ;
+            color: rgb(47,142,31);
+        }
+
+
+
+
+        @media screen and (max-width: 480px) {
+
+            .user-name{
+                height: 30px;
+                position: relative;
+                background-color:  rgb(230,50,50);
+                text-align: center;
+                line-height: 30px;
+                font-size: 14px;
+                font-family: SimHei ;
+                color: rgb(255,148,148);
+            }
+            .user-score>div{
+                position: relative;
+                background-color:  rgb(230,50,50);
+                text-align: center;
+                line-height: 70px;
+                font-size:18px;
+                font-family: SimHei ;
+                color: rgb(255,255,255);
+            }
+
+            .grow-wdtq-title{
+                font-size: 22px;
+            }
+            .grow-wdtq-xm{
+                left:145px;
+                top:40px;
+                font-size: 16px;
+            }
+            .grow-wdtq-ljtz{
+                font-size: 16px;
+            }
+            .grow-wdtq-ljtz .qtydfont{
+                font-size: 22px;
+            }
+
+
+            .grow-wdtq-list{
+                height: 340px;
+            }
+            .grow-wdtq-list ul li{
+                height: 170px;
+            }
+            .grow-wdtq-round{
+                width: 64px;
+                height: 64px;
+                margin-top:30px;
+                margin-right: auto;
+                margin-left: auto;
+                line-height: 64px;
+                text-align: center;
+                font-family: Cambria;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 25px;
+                color: white;
+                background-color: rgb(204,204,204);
+                border-radius: 100px;
+                -moz-border-radius: 100px;
+                -webkit-border-radius: 100px;
+            }
+            .grow-wdtq-round span{
+                font-size: 16px;
+            }
+            .grow-wdtq-label{
+                font-size: 16px;
+            }
+            .grow-active .grow-wdtq-label{
+                font-size: 16px;
+            }
+
+            .grow-czzdt-head{
+                height:90px;
+            }
+            .grow-czzdt-title{
+                font-size: 22px;
+            }
+            .grow-czzdt-ljtz{
+                font-size: 14px;
+            }
+            .grow-czzdt-ljtz .qtydfont{
+                font-size: 22px;
+            }
+            .grow-czzdt-time{
+                bottom: 5px;
+                font-size: 12px;
+            }
+
+            .grow-czzdt-list ul li{
+                width: 96%;
+                height: 160px;
+                margin-left: 4%;
+            }
+            .grow-czzdt-item-icon{
+                top:45px;
+                width: 64px;
+                height: 64px;
+                line-height: 64px;
+                font-size: 45px;
+                color: rgb(255,140,64);
+                border: 3px solid rgb(255,140,64);
+                border-radius: 15px;
+                -moz-border-radius: 15px;
+                -webkit-border-radius: 15px;
+            }
+            .grow-czzdt-item-class{
+                left:90px;
+                top:45px;
+                font-size: 17px;
+            }
+            .grow-czzdt-item-time{
+                left:90px;
+                top:85px;
+                font-size: 12px;
+            }
+            .grow-czzdt-item-add{
+                right:5px;
+                top:40px;
+                font-size: 20px;
+
+            }
+
+            .grow-czzdt-item-status{
+                right:5px;
+                top:75px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="m">
+        <header id="header" style="background-color: rgb(230,50,50)">
+            <!-- <a href="javascript:history.back();" class="a-back"><i class="qtydfont">&#xe623;</i>返回</a> -->
+            <a href="../register.html" class="a-left-link">注册</a>
+            <h1 class="primary-title">首页</h1>
+            <span class="icon-primary-nav qtydfont" id="icon-primary-nav">&#xe603;</span>
+            <nav class="primary-nav-group">
+                <a href="main.html"><i class="qtydfont">&#xe60d;</i>账户管理</a>
+                <a href="recharge.html"><i class="qtydfont">&#xe613;</i>充值</a>
+                <a href="bank.html"><i class="qtydfont">&#xe607;</i>银行卡</a>
+                <a href=""><i class="qtydfont">&#xe600;</i>我的交易</a>
+                <a href=""><i class="qtydfont">&#xe612;</i>邀请好友</a>
+                <a href=""><i class="qtydfont">&#xe618;</i>安全退出</a>
+            </nav>
+        </header>
+        <div id="body">
+            <div class="grow-div" id="grow-div">
+                <ul id="grow-ul">
+                    <!--<div style="width:100%;height:100%;position: absolute;background-color: rgb(219,219,219);z-index: 500;"></div>-->
+                    <!--<div style="width:70%;height:100%;position: absolute;background-color: rgb(255,215,0);z-index: 500;"></div>-->
+                    <!--<li class="level-item"></li>-->
+                    <!--<li class="level-item"></li>-->
+                    <!--<li class="level-user"></li>-->
+                    <!--<li class="level-item"></li>-->
+                    <!--<li class="level-item"></li>-->
+
+                </ul>
+            </div>
+            <div class="user-name"></div>
+            <div class="user-score"></div>
+
+            <div class="grow-wdtq">
+                <div class="grow-wdtq-head">
+                    <h1 class="grow-wdtq-title">我的特权</h1>
+                    <span class="grow-wdtq-xm">7项</span>
+                    <a class="grow-wdtq-ljtz">立即投资<span class="qtydfont">&#xe628;</span></a>
+                </div>
+                <div class="grow-wdtq-list">
+                    <ul>
+                        <li class="grow-active">
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li class="grow-active">
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li class="grow-active">
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li class="grow-active">
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li class="grow-active">
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li class="grow-active">
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li>
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                        <li>
+                            <div class="grow-wdtq-round">V<span>1</span></div>
+                            <div class="grow-wdtq-label">兑换特权</div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="grow-czzdt">
+                <div class="grow-czzdt-head">
+                    <h1 class="grow-czzdt-title">成长值动态</h1>
+                    <a class="grow-czzdt-ljtz">如何获取成长值<span class="qtydfont">&#xe628;</span></a>
+                    <span class="grow-czzdt-time">2016-11</span>
+                </div>
+                <div class="grow-czzdt-list">
+                    <ul>
+                        <li>
+                            <div class="grow-czzdt-item-icon"><span class="qtydfont">&#xe632;</span></div>
+                            <span class="grow-czzdt-item-class">投资</span>
+                            <span class="grow-czzdt-item-time">2016.11.25 15:02:16</span>
+                            <span class="grow-czzdt-item-add">+200</span>
+                            <span class="grow-czzdt-item-status">投资成功</span>
+                        </li>
+                        <li>
+                            <div class="grow-czzdt-item-icon"><span class="qtydfont">&#xe632;</span></div>
+                            <span class="grow-czzdt-item-class">投资</span>
+                            <span class="grow-czzdt-item-time">2016.11.25 15:02:16</span>
+                            <span class="grow-czzdt-item-add">+200</span>
+                            <span class="grow-czzdt-item-status">投资成功</span>
+                        </li>
+                        <li>
+                            <div class="grow-czzdt-item-icon"><span class="qtydfont">&#xe632;</span></div>
+                            <span class="grow-czzdt-item-class">投资</span>
+                            <span class="grow-czzdt-item-time">2016.11.25 15:02:16</span>
+                            <span class="grow-czzdt-item-add">+200</span>
+                            <span class="grow-czzdt-item-status">投资成功</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!--<div id="focus" class="focus">-->
+                <!--<div class="head"><ul></ul></div>-->
+                <!--<div class="body">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#"><img _src="/mobile/img/register_banner.jpg" src="" /></a></li>-->
+                        <!--<li><a href="#"><img _src="/mobile/img/register_banner.jpg" src=""/></a></li>-->
+                        <!--<li><a href="#"><img _src="/mobile/img/register_banner.jpg" src=""/></a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="site-stat hwxh cl">-->
+                <!--<span class="fl">累计投资：￥92,065,119.51</span><span class="fr">注册人数：74004</span>-->
+            <!--</div>-->
+            <!--
+
+            未注册用户，未投资用户推荐为 新手标
+
+            已投资用户为 推荐标
+
+            welfare    福利标
+            forecast   新标预告
+            finish     已满标
+            novice     新手专享
+            repayment  已还款
+
+             -->
+        	<!--<div class="project-base novice">-->
+        		<!--<h1 class="project-title">珠海市华融情海花园房抵押贷款项目</h1>-->
+	        	<!--<div class="project-progress pie_progress" role="progressbar" data-goal="100" data-barcolor="#f0494f" data-fillcolor="#fff" aria-valuemax="100">-->
+	        		<!--<div class="project-profit">-->
+	        			<!--<dl>-->
+	        				<!--<dt>年利率</dt>-->
+	        				<!--<dd class="c-primary ft14 hwxh"><i class="ft25 ">16 %</i></dd>-->
+	        			<!--</dl>-->
+	        			<!--<dl>-->
+	        				<!--<dt>起投金额</dt>-->
+	        				<!--<dd class="c-primary ft18 hwxh">1000元</dd>-->
+	        			<!--</dl>-->
+	        		<!--</div>-->
+	        	<!--</div>-->
+                <!--<p class="project-deadline"><i class="qtydfont ft16 c-success">&#xe66a;</i>本息保障</p>-->
+        		<!--<p class="project-quota">期限：<span class="c-primary hwxh">168 天</span></p>-->
+
+	        <!--</div>-->
+            <!--<div class="form-tips c-primary tac ft14 pb10">额外送10元红包券</div>-->
+            <!--<div class="form-btn pb20 mb10">-->
+                <!--<button class="btn-primary ">投资</button>-->
+            <!--</div>-->
+            <!--<div class="mt30 mb50 tac c-success ft12 pb20"><i class="qtydfont ft16 mr5">&#xe615;</i>账户资金由新浪支付全程托管，工商银行监管</div>-->
+        </div>
+        <div class="navfixed">
+            <ul>
+                <li>
+                    <a href="../home.html">
+                        <i class="qtydfont home">&#xe604;</i>
+                        <span class="ui-navbar-label">首 页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../invest.html">
+                        <i class="qtydfont invest">&#xe661;</i>
+                        <span class="ui-navbar-label">投 资</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../invest.html">
+                        <i class="qtydfont invest">&#xe656;</i>
+                        <span class="ui-navbar-label">活 动</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="main.html" class="current">
+                        <i class="qtydfont member">&#xe60d;</i>
+                        <span class="ui-navbar-label">账 户</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script src="../../lib/sea.js"></script>
+<script>seajs.use("page/mobile/main/home.js")</script>
+<script>seajs.use("page/mobile/main/test.js")</script>
+
+</body>
+</html>
