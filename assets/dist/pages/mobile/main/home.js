@@ -1,1 +1,0 @@
-define(function(require){var e=require("jquery"),o=require("../common"),s=require("asPieProgress");require("touchslide/1.1/touchslide");e(function(){TouchSlide({slideCell:"#focus",titCell:".head ul",mainCell:".body ul",effect:"leftLoop",autoPlay:true,autoPage:true,switchLoad:"_src"});e(".project-progress").asPieProgress({namespace:"pieProgress"}).asPieProgress("go","60")})});

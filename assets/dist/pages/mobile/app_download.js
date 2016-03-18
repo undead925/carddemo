@@ -1,1 +1,0 @@
-define(function(require){require("jquery");require("./common");$(function(){$("#header").find("h1").eq(0).html("App下载")})});

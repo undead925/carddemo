@@ -1,1 +1,0 @@
-define(function(require,exports,module){var e=require("jquery");require("../common");e(function(){e("#header h1").text("更多");e("#header a").eq(0).html("")})});

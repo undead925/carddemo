@@ -1,1 +1,0 @@
-define(function(require){var i=require("jquery");i("#icon-primary-nav").click(function(){if(i(".primary-nav-group").css("display")=="none"){i(".primary-nav-group").slideDown()}else{i(".primary-nav-group").slideUp()}});i("#m").bind("click",function(r){var n=i(r.target);if(n.attr("id")!="icon-primary-nav"){i(".primary-nav-group").slideUp()}})});
