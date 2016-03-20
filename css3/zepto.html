@@ -6,7 +6,7 @@
     <style>
         .gamediv{
             position: absolute;
-            width: 300px;
+            width: 80%;
             height: 450px;
 
         }
@@ -71,7 +71,7 @@
     <!--<div class="backb"></div>-->
     <!--</div>-->
 </div>
-<button style="position:relative;left: 400px;" onclick="shuffle()">朕要翻牌</button>
+<button style="position:relative;left: 82%;" onclick="shuffle()">朕要翻牌</button>
 <script>
 function Card(i){
     var card=document.createElement('div');
@@ -337,6 +337,9 @@ pointarray[4]=new Point(33,0);
 pointarray[5]=new Point(-33,33);
 pointarray[6]=new Point(0,33);
 pointarray[7]=new Point(33,33);
+var gwidth=$(".gamediv").width();
+console.log($(".gamediv").width());
+$(".gamediv").css("height",gwidth*1.5+"px");
 for(var i=0;i<8;i++){
     var rand=Math.floor(Math.random()*4);
     cards.push(new Card(rand));
