@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .gamediv{
+            position: absolute;
+            width: 300px;
+            height: 450px;
+
+        }
+        .card{
+            position: absolute;
+            width: 30%;
+            height: 30%;
+
+        }
+
+
+        .ace1{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("textures/ace1.png");
+            background-size:cover;
+        }
+
+        .ace2{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("textures/ace2.png");
+            background-size:cover;
+        }
+        .ace3{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("textures/ace3.png");
+            background-size:cover;
+        }
+
+        .ace4{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("textures/ace4.png");
+            background-size:cover;
+        }
+        .backb{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("textures/backb.png");
+            background-size:cover;
+        }
+
+
+
+    </style>
+    <script src="zepto.js"></script>
+</head>
+<body>
+<div class="gamediv">
+    <!--<div class="card">-->
+    <!--<div class="ace1"></div>-->
+    <!--<div class="ace2"></div>-->
+    <!--<div class="ace3"></div>-->
+    <!--<div class="ace4"></div>-->
+    <!--<div class="backb"></div>-->
+    <!--</div>-->
+</div>
+<button style="position:relative;left: 400px;" onclick="shuffle()">朕要翻牌</button>
+<script>
+function Card(i){
+    var card=document.createElement('div');
+    var ace1=document.createElement('div');
+    var ace2=document.createElement('div');
+    var ace3=document.createElement('div');
+    var ace4=document.createElement('div');
+    var backb=document.createElement('div');
+    var ace=[];
+    card.className="card";
+    ace1.className="ace1";
+    ace2.className="ace2";
+    ace3.className="ace3";
+    ace4.className="ace4";
+    backb.className="backb";
+    ace[0]=ace1;
+    ace[1]=ace2;
+    ace[2]=ace3;
+    ace[3]=ace4;
+    card.appendChild(ace[i]);
+    card.appendChild(backb);
+
+    card.animstate=0;
+    card.isturn=false;
+
+    card.turncard=function (){
+        console.log(this);
+        console.log(this.animstate);
+        var that=this;
+        switch (this.animstate){
+            case 0:
+                $(this).animate({rotate:'50deg',scaleX:'0'}, 100,'ease-out',function (){
+                    if(that.isturn){
+                        backb.style.display="";
+                        that.animstate=1;
+                        that.isturn=false;
+                    }
+                    else{
+                        backb.style.display="none";
+                        that.animstate=1;
+                        that.isturn=true;
+
+                    }
+                    that.turncard();
+                });
+
+                break;
+            case 1:
+                $(this).animate({rotate:'0deg',scaleX:'1'}, 100,'ease-out',function (){
+                    that.animstate=2;
+                });
+
+                break;
+        }
+    };
+
+    card.shuffle=function (){
+        var i=this.__index;
+        this.animstate++;
+        console.log(i);
+        console.log(this.animstate);
+        var that=this;
+        switch (this.animstate){
+            case 1:
+                $(this).animate({left:(3*i-10.5+35)+'%',top:(35)+'%'}, 300,'ease-out',function (){
+                    setTimeout(function(){
+                        that.shuffle();
+                    }, 0);
+                });
+                break;
+            case 2:
+                if(i<4){
+                    $(this).animate({left:(-18+35)+'%'},200+100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    });
+                }
+                else{
+                    $(this).animate({left:(18+35)+'%'},900-100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    });
+                }
+                break;
+            case 3:
+                if(i<4){
+                    $(this).animate({left:(3*i-10.5+35)+'%'},800-100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    });
+                }
+                else{
+                    $(this).animate({left:(3*i-10.5+35)+'%'},100+100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    });
+                }
+                break;
+            case 4:
+                $(this).animate({rotate:'50deg',scaleX:'0'},200+50*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                    if(that.isturn){
+                        backb.style.display="";
+                        that.isturn=false;
+                    }
+                    else{
+                        backb.style.display="none";
+                        that.isturn=true;
+                    }
+                    setTimeout(function(){
+                        that.shuffle();
+                    }, 0);
+                });
+                break;
+            case 5:
+                $(this).animate({rotate:'0deg',scaleX:'1'},200+50*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                    setTimeout(function(){
+                        that.shuffle();
+                    }, 0);
+                });
+                break;
+            case 6:
+                if(i<4){
+                    $(this).animate({left:(-18+35)+'%'},200+100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    },700-100*i);
+                }
+                else{
+                    $(this).animate({left:(18+35)+'%'},900-100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    },700-100*i);
+                }
+                break;
+            case 7:
+                if(i<4){
+                    $(this).animate({left:(3*i-10.5+35)+'%'},800-100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    });
+                }
+                else{
+                    $(this).animate({left:(3*i-10.5+35)+'%'},100+100*i,'cubic-bezier(0.17,0.89,0.32,1.28)',function (){
+                        setTimeout(function(){
+                            that.shuffle();
+                        }, 0);
+                    });
+                }
+                break;
+            case 8:
+                $(this).animate({left:(pointarray[i].x+35)+'%',top:(pointarray[i].y+35)+'%'}, 300,'ease-out',function (){
+                    dealall();
+                },200*i);
+                break;
+        }
+    };
+
+    card.cardclick=function (){
+        console.log(this.parentNode);
+        console.log($(this).parent());
+        this.animstate=0;
+        this.turncard();
+        removeClick();
+        setTimeout("turnall()",1200);
+    };
+
+    return card;
+
+}
+
+function Point(x,y){
+    this.x=x;
+    this.y=y;
+}
+
+function getRealStyle(el,cssName)
+{
+    var len=arguments.length, sty, f, fv;
+
+    'currentStyle' in el ? sty=el.currentStyle : 'getComputedStyle' in window
+            ? sty=window.getComputedStyle(el,null) : null;
+
+    if(cssName==="opacity" && document.all){
+        f = el.filters;
+        f && f.length>0 && f.alpha ? fv=f.alpha.opacity/100 : fv=1;
+        return fv;
+    }
+    cssName==="float" ? document.all ? cssName='styleFloat' : cssName='cssFloat' : cssName;
+    sty = (len==2) ? sty[cssName] : sty;
+    return sty;
+}
+
+function setPostion(el,P){
+    el.style.left=(P.x+50-15)+"%";
+    el.style.top=(P.y+50-15)+"%";
+
+}
+
+function turnall(){
+    console.log(isturnall);
+    if(!isturnall){
+        isturnall=true;
+        for(var i= 0,l=cards.length;i<l;i++){
+            if(!cards[i].isturn){
+                cards[i].turncard();
+            }
+        }
+    }
+}
+
+function dealall(){
+    console.log(isshuffle);
+    isshuffle++;
+    if(isshuffle>=8){
+        for(var i= 0,l=cards.length;i<l;i++){
+            cards[i].addEventListener("click", cards[i].cardclick);
+            cards[i].animstate=0;
+        }
+        isturnall=false;
+        isshuffle=0;
+    }
+}
+
+function removeClick(){
+    for(var i= 0,l=cards.length;i<l;i++){
+        cards[i].removeEventListener("click", cards[i].cardclick);
+    }
+}
+
+function removeTransition(){
+    for(var i= 0,l=cards.length;i<l;i++){
+        cards[i].removeEventListener("transitionend", cards[i].turncard);
+    }
+}
+
+function shuffle(){
+    console.log(isturnall);
+    if(isturnall){
+        for(var i= 0,l=cards.length;i<l;i++){
+            cards[i].animstate=0;
+            cards[i].shuffle();
+    }
+    }
+}
+
+var disturnall=false;
+var isshuffle=0;
+var cards=[];
+var gamediv=document.getElementsByClassName("gamediv")[0];
+var pointarray=[];
+pointarray[0]=new Point(-33,-33);
+pointarray[1]=new Point(0,-33);
+pointarray[2]=new Point(33,-3d3);
+pointarray[3]=new Point(-33,0);
+pointarray[4]=new Point(33,0);
+pointarray[5]=new Point(-33,33);
+pointarray[6]=new Point(0,33);
+pointarray[7]=new Point(33,33);
+for(var i=0;i<8;i++){
+    var rand=Math.floor(Math.random()*4);
+    cards.push(new Card(rand));
+    gamediv.appendChild(cards[i]);
+    cards[i].__index=i;
+    cards[i].addEventListener("click", cards[i].cardclick);
+    setPostion(cards[i],pointarray[i]);
+}
+
+
+
+
+
+</script>
+</body>
+</html>
